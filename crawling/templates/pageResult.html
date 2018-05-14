@@ -1,0 +1,34 @@
+{% extends "pageCrawl.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div id="txt"></div>
+    <div class="page-header">
+        <h3>Pages Crawled</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped" id="id_crawled_table">
+                <thead>
+                <tr>
+
+                    <th>URL</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<!-- ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<div id="loader" style="display:none;width:69px;height:89px;position:fixed;top:50%;left:50%;padding:2px;"><img src="{% static 'images/loader.svg' %}" width="64" height="64" /><br></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="{% static 'js/pageResult.js' %}"></script>
+{% endblock content %}
+
